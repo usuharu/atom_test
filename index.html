@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atom</title>
-    <script src="nfc.js"></script>
+    <script>
+      window.onload = function(){
+      document.getElementById('barcode').focus();
+      }
+    </script>
     <style>
         @charset "UTF-8";
 /* ------------------------------ */
@@ -231,11 +235,18 @@ body {
 <body>
     <header>
         <header class="header02">
-            <h1 class="header02-logo"><img src="shq3cvikwrQsO4B1663141328_1663141431-removebg-preview.png" alt="Atom" style="transform: rotate(90deg);height: 124.4px; width: 70px;"></h1>
+            <h1 class="header02-logo"><img src="shq3cvikwrQsO4B1663141328_1663141431-removebg-preview.png" alt="Atom Logo" style="transform: rotate(90deg);height: 124.4px; width: 70px;"></h1>
         </header>
     </header>
     <center>
     <h1>Atomへようこそ!カードをタッチしてください。</h1>
     </center>
+    <form>
+    <input type="text" name="barcode" id="barcode" cols="40" rows="2">
+  </input>
+  <input type="submit" value="送信する">
+
+<input type="reset" value="リセット">
+  </form>
 </body>
 </html>
