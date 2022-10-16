@@ -1,67 +1,241 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
-    <title>ログイン</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atom</title>
+    <script src="nfc.js"></script>
+    <style>
+        @charset "UTF-8";
+/* ------------------------------ */
+/* リセットCSS */
+/* ------------------------------ */
+html {
+  color: #000;
+  background: #fff;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  *font-size: 100%;
+  border-radius: 0;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: inherit;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  display: block;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+legend {
+  color: #000;
+}
+
+main {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+svg {
+  display: block;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ------------------------------ */
+/* 全体共通のスタイル */
+/* ------------------------------ */
+html {
+  background-color: #fff;
+}
+
+body {
+  line-height: 1.75;
+  font-size: 16px;
+  color: #333;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+.main {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+/* ------------------------------ */
+/* sample02 */
+/* ------------------------------ */
+
+.header02 {
+  padding: 16px 24px;
+  background-color: #fafafa;
+}
+
+.header02-logo {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.header02-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 24px;
+}
+    </style>
 </head>
-
-<header>
-    <center>
-        <h1>JavaScriptとHTMLで簡単なログインフォームを作る</h1>
-    </center>
-</header>
-<style>
-    header {
-        position: fixed;
-        color: white;
-        width: 100%;
-        height: 70px;
-        background-color: #8dc21f;
-    }
-</style>
-
-<br>
-<br>
-<br>
-
 <body>
-    <div>
-        <!--フォーム-->
-        <form name="login_form">
-            <center>
-                <h1 class="contact-title">ログイン</h1>
-                <p>ID, Passwordご入力の上, 「認証」ボタンをクリックしてください.</p>
-            </center>
-            <div>
-
-                <center>
-                    <div>
-                        <input type="id" name="id" placeholder="ID">
-                    </div>
-                    <br>
-                    <div>
-                        <input type="password" name="pass" placeholder="Password" onchange="nextPage()">
-                    </div>
-                </center>
-
-            </div>
-            <button type="button" onClick="nextPage();">認証</button>
-        </form>
-
-        <!--ログイン処理-->
-        <script language="JavaScript" type="text/javascript">
-            function nextPage() {
-                id = document.login_form.id.value
-                pwd = document.login_form.pass.value;
-                location.href = id + "_" + pwd + ".html";
-            }
-        </script>
-
-    </div>
+    <header>
+        <header class="header02">
+            <h1 class="header02-logo"><img src="shq3cvikwrQsO4B1663141328_1663141431-removebg-preview.png" alt="Atom" style="transform: rotate(90deg);height: 124.4px; width: 70px;"></h1>
+        </header>
+    </header>
+    <center>
+    <h1>Atomへようこそ!カードをタッチしてください。</h1>
+    </center>
 </body>
-
 </html>
-
-
