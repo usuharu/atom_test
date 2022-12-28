@@ -1,245 +1,31 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atom</title>
-    <script>
-      window.onload = function(){
-      document.getElementById('barcode').focus();
-      }
-    </script>
-    <style>
-        @charset "UTF-8";
-/* ------------------------------ */
-/* リセットCSS */
-/* ------------------------------ */
-html {
-  color: #000;
-  background: #fff;
-}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>WebNFC</title>
+    <link rel="stylesheet" href="https://ktpi2000.github.io/webnfc-playground/style.css" />
+    <script src="https://ktpi2000.github.io/webnfc-playground/script.js" defer></script>
+  </head>
+  <body>
+    <h1>
+      WebNFC
+    </h1>
+    <h2>
+      Write
+    </h2>
+    <input type="text" id="writeText" class="inputText">
+    <button id="writeButton" class="button">Write</button>
+    <div id="writeLog" class="log"></div>
 
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-input,
-textarea,
-p,
-blockquote,
-th,
-td {
-  margin: 0;
-  padding: 0;
-}
+    <br />
+    <hr />
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-}
-
-fieldset,
-img {
-  border: 0;
-}
-
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-strong,
-th,
-var {
-  font-style: normal;
-  font-weight: normal;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-caption,
-th {
-  text-align: left;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-q:before,
-q:after {
-  content: "";
-}
-
-abbr,
-acronym {
-  border: 0;
-  font-variant: normal;
-}
-
-sup {
-  vertical-align: text-top;
-}
-
-sub {
-  vertical-align: text-bottom;
-}
-
-input,
-textarea,
-select,
-button {
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-  *font-size: 100%;
-  border-radius: 0;
-  border: none;
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: inherit;
-}
-
-input,
-textarea,
-select {
-  font-size: 16px;
-}
-
-textarea {
-  resize: vertical;
-  display: block;
-}
-
-button {
-  padding: 0;
-  cursor: pointer;
-}
-
-legend {
-  color: #000;
-}
-
-main {
-  display: block;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  vertical-align: bottom;
-}
-
-svg {
-  display: block;
-}
-
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
-}
-
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* ------------------------------ */
-/* 全体共通のスタイル */
-/* ------------------------------ */
-html {
-  background-color: #fff;
-}
-
-body {
-  line-height: 1.75;
-  font-size: 16px;
-  color: #333;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-}
-@media screen and (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
-}
-
-.main {
-  width: 90%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 80px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-/* ------------------------------ */
-/* sample02 */
-/* ------------------------------ */
-
-.header02 {
-  padding: 16px 24px;
-  background-color: #fafafa;
-}
-
-.header02-logo {
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.header02-list {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 24px;
-}
-    </style>
-</head>
-<body>
-    <header>
-        <header class="header02">
-            <h1 class="header02-logo"><img src="shq3cvikwrQsO4B1663141328_1663141431-removebg-preview.png" alt="Atom Logo" style="transform: rotate(90deg);height: 124.4px; width: 70px;"></h1>
-        </header>
-    </header>
-    <center>
-    <h1>Atomへようこそ!カードをタッチしてください。</h1>
-    </center>
-</body>
+    <h2>
+      Read
+    </h2>
+    <button id="readButton" class="button">Read</button>
+    <div id="readLog" class="log"></div>
+  </body>
 </html>
